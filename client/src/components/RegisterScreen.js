@@ -26,6 +26,10 @@ export default function RegisterScreen() {
             formData.get('password'),
             formData.get('passwordVerify')
         );
+        // auth.loginUser(
+        //     formData.get('email'),
+        //     formData.get('password')
+        // );
     };
 
     return (

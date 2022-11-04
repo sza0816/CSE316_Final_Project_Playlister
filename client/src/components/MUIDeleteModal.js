@@ -27,6 +27,7 @@ export default function MUIDeleteModal() {
     }
     function handleCloseModal(event) {
         store.unmarkListForDeletion();
+        // store.hideDeleteListModal()
     }
 
     return (
@@ -50,7 +51,7 @@ export default function MUIDeleteModal() {
                         onClick={handleCloseModal}
                     >Cancel</button>
                 </div>
-            </div>
+                </div>
             </Box>
         </Modal>
     );

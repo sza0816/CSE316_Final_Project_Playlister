@@ -39,14 +39,14 @@ function EditToolbar() {
                 <AddIcon />
             </Button>
             <Button 
-                disabled={!store.canUndo()}
+                disabled={!store.canUndo()||modalOpen}
                 id='undo-button'
                 onClick={handleUndo}
                 variant="contained">
                     <UndoIcon />
             </Button>
-            <Button 
-                disabled={!store.canRedo()}
+            <Button
+                disabled={!store.canRedo()||modalOpen}
                 id='redo-button'
                 onClick={handleRedo}
                 variant="contained">

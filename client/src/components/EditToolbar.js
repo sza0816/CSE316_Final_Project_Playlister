@@ -27,10 +27,12 @@ function EditToolbar() {
     function handleClose() {
         store.closeCurrentList();
     }
+    let modalOpen=store.isDeleteListModalOpen()|| store.isEditSongModalOpen()||store.isRemoveSongModalOpen();
+    console.log(modalOpen);
     return (
         <div id="edit-toolbar">
             <Button
-                disabled={!store.canAddNewSong()}
+                disabled={modalOpen}
                 id='add-song-button'
                 onClick={handleAddNewSong}
                 variant="contained">
@@ -51,7 +53,7 @@ function EditToolbar() {
                     <RedoIcon />
             </Button>
             <Button 
-                disabled={!store.canClose()}
+                disabled={modalOpen}
                 id='close-button'
                 onClick={handleClose}
                 variant="contained">

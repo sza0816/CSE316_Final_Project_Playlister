@@ -81,8 +81,9 @@ export default function AppBanner() {
             editToolbar = <EditToolbar />;
         }
     }
-    
+
     function getAccountMenu(loggedIn) {
+        console.log("loggedin? "+ loggedIn);
         let userInitials = auth.getUserInitials();
         console.log("userInitials: " + userInitials);
         if (loggedIn) 

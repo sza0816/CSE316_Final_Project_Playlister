@@ -1,8 +1,10 @@
 import { useContext } from 'react'
+import authContext from "../auth";
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
-import auth from './auth/index.js';
+import Alert from '@mui/material/Alert';
+import Button from '@mui/material/Button';
 
 const style = {
     position: 'absolute',
@@ -16,31 +18,29 @@ const style = {
     p: 4,
 };
 
-export default function AccountErrorModal(){
+export default function MUIAccountErrorModal() {
+    const { auth } = useContext(authContext);
+    function handleCloseModal(event){
+        auth.closeModal();
+    }
 
-    console.log(auth.errMsg);
-
-    let er=auth.errMsg;
-    console.log(er);
-
-    return(
+    return (
         <Modal
-            open={er}
+            open={auth.errMsg !== null}
         >
             <Box sx={style}>
                 <div className="modal-dialog">
-                    <header className='dialog-header'>
-                        ERROR! Please try again!
-                    </header>
+                    <Alert severity="warning">{auth.errMsg}</Alert>
                     <div id="confirm-cancel-container">
-                        <button
-                            id='modal-ok-button'
-                            className='modal-button'
-                        >OK</button>
+                        <Button 
+                        variant="contained"
+                        className="modal-button"
+                        onClick={handleCloseModal}
+                        >OK</Button>
                     </div>
+                    
                 </div>
             </Box>
         </Modal>
     );
-    
 }

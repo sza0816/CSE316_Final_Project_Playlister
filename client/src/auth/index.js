@@ -10,7 +10,9 @@ export const AuthActionType = {
     GET_LOGGED_IN: "GET_LOGGED_IN",
     LOGIN_USER: "LOGIN_USER",
     LOGOUT_USER: "LOGOUT_USER",
-    REGISTER_USER: "REGISTER_USER"
+    REGISTER_USER: "REGISTER_USER",
+    OPEN_MODAL:"OPEN_MODAL",
+    CLOSE_MODAL: "CLOSE_MODAL"
 }
 
 function AuthContextProvider(props) {
@@ -63,6 +65,13 @@ function AuthContextProvider(props) {
                     errMsg: payload.errMsg
                 })
             }
+            case AuthActionType.CLOSE_MODAL:{
+                return setAuth({
+                    user: null,
+                    loggedIn:false,
+                    errMsg: null
+                })
+            }
             default:
                 return auth;
         }
@@ -87,13 +96,15 @@ function AuthContextProvider(props) {
             response = await api.registerUser(firstName, lastName, email, password, passwordVerify);  
         }catch(error){
             console.log("error 401");
+            let errMsg = error.response.data.errorMessage;
             authReducer({
                 type: AuthActionType.OPEN_MODAL,
                 payload: {
-                    errMsg: true
+                    errMsg: errMsg
                 }
             })
-            history.push("/");
+            // history.push("/");
+            console.log(auth.errMsg != null + "--------"+auth.errMsg);
             return;
         }
         if (response.status === 200) {
@@ -113,14 +124,16 @@ function AuthContextProvider(props) {
         try{
             response=await api.loginUser(email, password);
         }catch(error){
-            console.log("error 400");
+            let errMsg=error.response.data.errorMessage;
+            console.log("error 400",errMsg);
             authReducer({
                 type: AuthActionType.OPEN_MODAL,
                 payload: {
-                    errMsg: true
+                    errMsg: errMsg
                 }
             })
             // history.push("/login");
+            console.log(auth.errMsg != null,"########",auth.errMsg);
             return;
         }
         if (response.status === 200) {
@@ -153,6 +166,13 @@ function AuthContextProvider(props) {
         }
         console.log("user initials: " + initials);
         return initials;
+    }
+
+    auth.closeModal = function(){
+        authReducer( {
+            type: AuthActionType.CLOSE_MODAL,
+            payload: null
+        })
     }
 
     return (

@@ -6,6 +6,9 @@ import CreateSong_Transaction from '../transactions/CreateSong_Transaction'
 import MoveSong_Transaction from '../transactions/MoveSong_Transaction'
 import RemoveSong_Transaction from '../transactions/RemoveSong_Transaction'
 import UpdateSong_Transaction from '../transactions/UpdateSong_Transaction'
+
+import { MUIRemoveSongModal } from '../components'
+
 import AuthContext from '../auth'
 /*
     This is our global data store. Note that it uses the Flux design pattern,

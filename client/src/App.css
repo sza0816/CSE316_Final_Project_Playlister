@@ -242,6 +242,7 @@ body {
 
 input {
   font-size: 20pt;
+  border-radius: 5px;
 }
 
 .top5-item,
@@ -327,12 +328,13 @@ input {
 
 .modal-north{
   background-color: lightblue;
+  font-size: 28px;
 }
-/* .modal-north,
-.modal-center,
-.moda-south{
-  border: #111111;
-} */
+
+.modal-center{
+  background-color: aliceblue;
+  font-size: 18px;
+}
 
 .modal p + p {
   margin-top: 1rem;
@@ -344,7 +346,7 @@ input {
 }
 
 .dialog-header {
-  font-size: 24pt;
+  font-size: 24px;
 }
 
 #close-modal-button {
@@ -362,7 +364,13 @@ input {
 .modal-south{
   text-align: center;
 }
+.modal-textfield{
+  margin-left: 3rem;
+}
 
+body > div.MuiModal-root.css-79ws1d-MuiModal-root > div.MuiBox-root.css-1wnsr1i{
+  padding: 15px;
+}
 #playlister-statusbar{
   position:sticky;
   left: 0%;

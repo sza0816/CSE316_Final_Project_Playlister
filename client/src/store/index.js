@@ -268,7 +268,7 @@ function GlobalStoreContextProvider(props) {
     store.createNewList = async function () {
         let newListName = "Untitled" + store.newListCounter;
         const response = await api.createPlaylist(newListName, [], auth.user.email);
-        console.log("createNewList response: " + response);
+        console.log("createNewList response: " + response+ auth.user.email);
         if (response.status === 201) {
             tps.clearAllTransactions();
             let newList = response.data.playlist;

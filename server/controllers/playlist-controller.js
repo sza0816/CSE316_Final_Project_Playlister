@@ -11,14 +11,15 @@ createPlaylist = (req, res) => {
     const body = req.body;
     console.log("createPlaylist body: " + JSON.stringify(body));
 
-    if (!body) {
+    if (!body) { // check if there is a request body being inputted
         return res.status(400).json({
             success: false,
             error: 'You must provide a Playlist',
         })
     }
 
-    const playlist = new Playlist(body);
+    const playlist = new Playlist(body);   //build a new playlist
+    console.log("ownerEmail: "+ req.ownerEmail);
     console.log("playlist: " + playlist.toString());
     if (!playlist) {
         return res.status(400).json({ success: false, error: err })

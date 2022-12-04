@@ -90,10 +90,10 @@ function AuthContextProvider(props) {
         }
     }
 
-    auth.registerUser = async function(firstName, lastName, email, password, passwordVerify) {
+    auth.registerUser = async function(Username, firstName, lastName, email, password, passwordVerify) {
         let response;
         try{
-            response = await api.registerUser(firstName, lastName, email, password, passwordVerify);  
+            response = await api.registerUser(Username, firstName, lastName, email, password, passwordVerify);  
         }catch(error){
             console.log("error 401");
             let errMsg = error.response.data.errorMessage;
@@ -115,7 +115,10 @@ function AuthContextProvider(props) {
                 }
             })
             history.push("/login");
-            auth.loginUser(email,password);
+            auth.logoutUser();
+            
+            // history.push("/");
+            // auth.loginUser(email,password);
         }
     }
 
@@ -166,6 +169,13 @@ function AuthContextProvider(props) {
         }
         console.log("user initials: " + initials);
         return initials;
+    }
+
+    auth.getUsername=function(){
+        let Username="";
+        if(auth.user){
+            Username+=auth.user.Username;
+        }
     }
 
     auth.closeModal = function(){

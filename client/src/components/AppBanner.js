@@ -88,6 +88,8 @@ export default function AppBanner() {
         console.log("loggedin? "+ loggedIn);
         let userInitials = auth.getUserInitials();
         console.log("userInitials: " + userInitials);
+        let Username=auth.getUsername();
+        console.log("username: "+Username);
         if (loggedIn) 
             return <div>
                     <Avatar

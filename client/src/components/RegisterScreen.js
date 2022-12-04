@@ -22,6 +22,7 @@ export default function RegisterScreen() {
         event.preventDefault();
         const formData = new FormData(event.currentTarget);
         auth.registerUser(
+            formData.get('Username'),
             formData.get('firstName'),
             formData.get('lastName'),
             formData.get('email'),
@@ -31,15 +32,16 @@ export default function RegisterScreen() {
     };
 
     return (
-            <Container component="main" maxWidth="xs">
+            <Container component="main" maxWidth="xs" sx={{ height: '100vh'}}>
                 <CssBaseline />
                 <Box
                     sx={{
-                        marginTop: 8,
+                        my: 1,
+                        mx: 4,
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
-                    }}
+                      }}
                 >
                     <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
                         <LockOutlinedIcon />
@@ -47,8 +49,28 @@ export default function RegisterScreen() {
                     <Typography component="h1" variant="h5">
                         Sign up
                     </Typography>
-                    <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+                    <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1}}>
                         <Grid container spacing={2}>
+                            <Grid item xs={12}>
+                                <TextField
+                                    required
+                                    fullWidth
+                                    id="Username"
+                                    label="Username"
+                                    name="Username"
+                                    autoComplete="Username"
+                                />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <TextField
+                                    required
+                                    fullWidth
+                                    id="email"
+                                    label="Email Address"
+                                    name="email"
+                                    autoComplete="email"
+                                />
+                            </Grid>
                             <Grid item xs={12} sm={6}>
                                 <TextField
                                     autoComplete="fname"
@@ -68,16 +90,6 @@ export default function RegisterScreen() {
                                     label="Last Name"
                                     name="lastName"
                                     autoComplete="lname"
-                                />
-                            </Grid>
-                            <Grid item xs={12}>
-                                <TextField
-                                    required
-                                    fullWidth
-                                    id="email"
-                                    label="Email Address"
-                                    name="email"
-                                    autoComplete="email"
                                 />
                             </Grid>
                             <Grid item xs={12}>

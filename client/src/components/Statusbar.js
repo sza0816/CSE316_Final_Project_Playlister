@@ -1,5 +1,5 @@
-// import { useContext } from 'react'
-// import { GlobalStoreContext } from '../store'
+import { useContext } from 'react'
+import { GlobalStoreContext } from '../store'
 import { Typography } from '@mui/material'
 
 /*
@@ -8,13 +8,15 @@ import { Typography } from '@mui/material'
     @author McKilla Gorilla
 */
 function Statusbar() {
-    // const { store } = useContext(GlobalStoreContext);
-    // let text ="";
-    // if (store.currentList)
-    //     text = store.currentList.name;
+    const { store } = useContext(GlobalStoreContext);
+    let text ="";
+    if (store.currentList)
+        text = store.currentList.name;
+    else
+        text="Your Lists";
     return (
         <div id="playlister-statusbar">
-            <Typography variant="h2">Your Lists</Typography>
+            <Typography variant="h2">{text}</Typography>
         </div>
     );
 }

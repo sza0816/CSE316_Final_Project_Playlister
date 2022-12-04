@@ -39,22 +39,34 @@ const HomeScreen = () => {
     }
     return (
         <div id="playlist-selector">
-            <div id="list-selector-heading">
-            <Fab 
-                color="primary" 
-                aria-label="add"
-                id="add-list-button"
-                onClick={handleCreateNewList}
-            >
-                <AddIcon />
-            </Fab>
-                <Typography variant="h2">Your Lists</Typography>
-            </div>
+            
+
+            {/********* navigation bar *********/}
+
             <div id="list-selector-list">
                 {
                     listCard
                 }
                 <MUIDeleteModal />
+            </div>
+
+             {/********* youtube API *********/}
+
+             <div id="list-selector-heading">
+            <Fab 
+                color="primary" 
+                aria-label="add"
+                id="add-list-button"
+                onClick={handleCreateNewList}
+                style={{background:"transparent",
+                    color: "black", 
+                    position: "absolute",
+                    bottom: "5%",
+                    left: "35%",
+                }}
+            >
+                <AddIcon />
+            </Fab>
             </div>
         </div>)
 }

@@ -14,6 +14,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import Avatar from '@mui/material/Avatar';
 
 export default function AppBanner() {
     const { auth } = useContext(AuthContext);
@@ -88,7 +89,19 @@ export default function AppBanner() {
         let userInitials = auth.getUserInitials();
         console.log("userInitials: " + userInitials);
         if (loggedIn) 
-            return <div>{userInitials}</div>;
+            return <div>
+                    <Avatar
+                    style={{backgroundColor: "rgb(194,68,216)", 
+                    color: "black", 
+                    border: "2px solid black",
+                    position: "absolute",
+                    top: "5%",
+                    right: "3%"
+                }}
+                    >
+                        {userInitials}
+                    </Avatar>
+                </div>
         else
             return <AccountCircle />;
     }
@@ -111,7 +124,7 @@ export default function AppBanner() {
                     <Box sx={{ flexGrow: 1 }}>{editToolbar}</Box>                     
                     {/* no edit tool bar here */}
 
-                    <Box sx={{ display: { xs: 'none', md: 'flex', alignItems: 'flex-end' } }}>
+                    <Box sx={{ display: { xs: 'none', md: 'flex'}}}>
                         <IconButton
                             size="large"
                             edge="end"

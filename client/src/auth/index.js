@@ -122,10 +122,10 @@ function AuthContextProvider(props) {
         }
     }
 
-    auth.loginUser = async function(email, password) {
+    auth.loginUser = async function(Username, password) {
         let response;
         try{
-            response=await api.loginUser(email, password);
+            response=await api.loginUser(Username, password);
         }catch(error){
             let errMsg=error.response.data.errorMessage;
             console.log("error 400",errMsg);

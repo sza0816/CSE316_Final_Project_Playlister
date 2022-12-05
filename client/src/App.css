@@ -204,8 +204,8 @@ top: 5%;
 #list-selector-list {
   position: absolute;
   top: 21%;
-  width: 66%;
-  height: 67%;
+  width: 64.7%;
+  height: 70%;
   display: flex;
   flex-direction: column;
   border: 1px solid gray;
@@ -215,8 +215,8 @@ top: 5%;
 #video-player{
   position: absolute;
   top: 21%;
-  width: 33.5%;
-  height: 67%;
+  width: 35%;
+  height: 70%;
   right: 0%;
   display: flex;
   flex-direction: column;
@@ -245,7 +245,7 @@ top: 5%;
 .unselected-list-card:hover {
   cursor: pointer;
   background-color: var(--swatch-contrast);
-  color: white;
+  color: darkgray;
 }
 
 .selected-list-card {
@@ -254,7 +254,7 @@ top: 5%;
 }
 
 .unselected-list-card {
-  background-color: var(--swatch-complement);
+  background-color: rgb(255,255,242);
 }
 
 .list-card-button {
@@ -438,17 +438,22 @@ input {
 body > div.MuiModal-root.css-79ws1d-MuiModal-root > div.MuiBox-root.css-1wnsr1i{
   padding: 15px;
 }
+
+/****************** status bar styles ***********************/
 #playlister-statusbar{
   position:sticky;
   left: 0%;
-  top: 90%;
+  top: 93%;
   width: 100%;
-  height: 11%;
+  height: 6%;
   background-color:rgb(196,196,196);
   display:flex;
   align-items: center;
   justify-content: center;
-  font-size: 36pt;
+}
+
+h2.MuiTypography-root{
+  font-size:28pt;
 }
 
 /* ANIMATIONS

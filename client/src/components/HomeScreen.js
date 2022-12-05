@@ -67,8 +67,8 @@ const HomeScreen = () => {
                 style={{background:"transparent",
                     color: "black", 
                     position: "absolute",
-                    bottom: "5%",
-                    left: "35%",
+                    bottom: "0%",
+                    left: "37%",
                 }}
             >
                 <AddIcon />

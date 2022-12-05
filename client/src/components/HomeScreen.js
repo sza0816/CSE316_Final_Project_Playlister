@@ -2,11 +2,13 @@ import React, { useContext, useEffect } from 'react'
 import { GlobalStoreContext } from '../store'
 import ListCard from './ListCard.js'
 import MUIDeleteModal from './MUIDeleteModal'
+import NavBar from './NavBar'
 
 import AddIcon from '@mui/icons-material/Add';
 import Fab from '@mui/material/Fab'
 import List from '@mui/material/List';
 import Typography from '@mui/material/Typography'
+import { borderRadius, Box } from '@mui/system'
 /*
     This React component lists all the top5 lists in the UI.
     
@@ -25,7 +27,7 @@ const HomeScreen = () => {
     let listCard = "";
     if (store) {
         listCard = 
-            <List sx={{ width: '90%', left: '5%', bgcolor: 'background.paper' }}>
+            <List sx={{ width: '100%',overflow:"scroll", borderRadius:"2%"}}>
             {
                 store.idNamePairs.map((pair) => (
                     <ListCard
@@ -40,17 +42,21 @@ const HomeScreen = () => {
     return (
         <div id="playlist-selector">
             
+            <NavBar/>
 
-            {/********* navigation bar *********/}
+            <Box id="main-screen"> 
+                <div id="list-selector-list">
+                    {
+                        listCard
+                    }
+                    <MUIDeleteModal />
+                </div>
 
-            <div id="list-selector-list">
-                {
-                    listCard
-                }
-                <MUIDeleteModal />
-            </div>
+                {/********* youtube API *********/}
+                <div id="video-player"></div>
 
-             {/********* youtube API *********/}
+            </Box>
+
 
             <div id="list-selector-heading">
             <Fab 

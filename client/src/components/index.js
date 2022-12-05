@@ -13,6 +13,7 @@ import SongCard from './SongCard'
 import SplashScreen from './SplashScreen'
 import Statusbar from './Statusbar'
 import WorkspaceScreen from './WorkspaceScreen'
+import NavBar from './NavBar'
 
 //import MUIAccountErrorModal from './MUIAccountErrorModal'
 /*
@@ -36,5 +37,6 @@ export {
     SplashScreen,
     Statusbar, 
     WorkspaceScreen,
-    MUIAccountErrorModal
+    MUIAccountErrorModal,
+    NavBar
  }

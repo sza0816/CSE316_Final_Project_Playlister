@@ -122,14 +122,25 @@ registerUser = async (req, res) => {
                 })
         }
         console.log("password and password verify match");
-        const existingUser = await User.findOne({ email: email });
-        console.log("existingUser: " + existingUser);
-        if (existingUser) {
+        const existingEmailUser = await User.findOne({ email: email});
+        console.log("existingUser: " + existingEmailUser);
+        if (existingEmailUser) {
             return res
                 .status(400)
                 .json({
                     success: false,
                     errorMessage: "An account with this email address already exists."
+                })
+        }
+
+        const exsitingUsername=await User.findOne({Username:Username});
+        console.log("existing username: "+exsitingUsername);
+        if(exsitingUsername){
+            return res
+                .status(400)
+                .json({
+                    success: false,
+                    errorMessage: "An account with this username already exists."
                 })
         }
 

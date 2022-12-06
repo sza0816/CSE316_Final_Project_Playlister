@@ -53,7 +53,8 @@ const HomeScreen = () => {
                 </div>
 
                 {/********* youtube API *********/}
-                <div id="video-player"></div>
+                <Box id="player-comment-box">
+                </Box>
 
             </Box>
 

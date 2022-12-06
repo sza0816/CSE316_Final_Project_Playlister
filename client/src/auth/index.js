@@ -115,10 +115,6 @@ function AuthContextProvider(props) {
                 }
             })
             history.push("/login");
-            auth.logoutUser();
-            
-            // history.push("/");
-            // auth.loginUser(email,password);
         }
     }
 

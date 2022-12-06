@@ -174,9 +174,12 @@ function AuthContextProvider(props) {
     auth.getUsername=function(){
         let Username="";
         if(auth.user){
-            Username+=auth.user.Username;
+            Username+= auth.user.Username;
         }
+        console.log("username: "+ Username);
+        return Username;
     }
+
 
     auth.closeModal = function(){
         authReducer( {

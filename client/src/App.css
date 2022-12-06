@@ -122,7 +122,8 @@ top: 5%;
 /* *******************************************************************/
 #edit-toolbar {
   background-color: transparent;
-  float: right;
+  /* float: center; */
+  max-width: 100%;
 }
 
 .top5-button,
@@ -201,6 +202,7 @@ top: 5%;
   float: left;
 }
 
+/*  *******************list cards & song cards*********************** */
 #list-selector-list {
   position: absolute;
   top: 21%;
@@ -223,6 +225,11 @@ top: 5%;
   background-color: white;
   border: 1px solid gray;
   border-radius: 3%;
+}
+
+.MuiCollapse-entered > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1){
+  max-height: 10rem;
+  overflow: scroll;
 }
 
 .list-card,
@@ -262,6 +269,7 @@ top: 5%;
   transform: scale(2);
 }
 
+/* ********************************************************** */
 #workspace-home,
 #workspace-edit {
   position: absolute;

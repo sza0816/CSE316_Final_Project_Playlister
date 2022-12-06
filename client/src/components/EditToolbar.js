@@ -4,7 +4,6 @@ import Button from '@mui/material/Button';
 import AddIcon from '@mui/icons-material/Add';
 import RedoIcon from '@mui/icons-material/Redo';
 import UndoIcon from '@mui/icons-material/Undo';
-import CloseIcon from '@mui/icons-material/HighlightOff';
 
 /*
     This toolbar is a functional React component that
@@ -12,7 +11,7 @@ import CloseIcon from '@mui/icons-material/HighlightOff';
     
     @author McKilla Gorilla
 */
-function EditToolbar() {
+function EditToolbar(props) {
     const { store } = useContext(GlobalStoreContext);
 
     function handleAddNewSong() {
@@ -24,9 +23,13 @@ function EditToolbar() {
     function handleRedo() {
         store.redo();
     }
-    function handleClose() {
-        store.closeCurrentList();
-    }
+    // function handleClose() {
+    //     store.closeCurrentList();
+    // }
+
+    // if the current list is published
+        // toolBar= only delete list button and duplicate buttons
+
     let modalOpen=store.isDeleteListModalOpen()|| store.isEditSongModalOpen()||store.isRemoveSongModalOpen();
     console.log(modalOpen);
     return (
@@ -52,13 +55,13 @@ function EditToolbar() {
                 variant="contained">
                     <RedoIcon />
             </Button>
-            <Button 
+            {/* <Button 
                 disabled={modalOpen}
                 id='close-button'
                 onClick={handleClose}
                 variant="contained">
                     <CloseIcon />
-            </Button>
+            </Button> */}
         </div>
     )
 }

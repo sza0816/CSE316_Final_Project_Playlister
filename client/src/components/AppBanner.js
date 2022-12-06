@@ -85,11 +85,14 @@ export default function AppBanner() {
     }
 
     function getAccountMenu(loggedIn) {
-        console.log("loggedin? "+ loggedIn);
+        // console.log("loggedin? "+ loggedIn);
+
         let userInitials = auth.getUserInitials();
         console.log("userInitials: " + userInitials);
+
         let Username=auth.getUsername();
-        console.log("username: "+Username);
+        console.log("Username: "+ Username);
+
         if (loggedIn) 
             return <div>
                     <Avatar
@@ -123,7 +126,7 @@ export default function AppBanner() {
                         </Link>
                     </Typography>
 
-                    <Box sx={{ flexGrow: 1 }}>{editToolbar}</Box>                     
+                    {/* <Box sx={{ flexGrow: 1 }}>{editToolbar}</Box>                      */}
                     {/* no edit tool bar here */}
 
                     <Box sx={{ display: { xs: 'none', md: 'flex'}}}>

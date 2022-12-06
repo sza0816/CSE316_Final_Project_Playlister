@@ -37,8 +37,6 @@ function ListCard(props) {
     const [Expanded, setExpanded] = useState(false);
     const { auth } = useContext(AuthContext);
 
-    console.log(store.CurrentList);
-
 
     function handleLoadList(event, id) {
         console.log("handleLoadList for " + id);
@@ -66,7 +64,7 @@ function ListCard(props) {
         setExpanded(!Expanded);
     }
 
-    console.log(store.currentList);       //get the current list object of the card
+    // console.log(store.currentList);       //get the current list object of the card
 
     function handleToggleEdit(event) {
         event.stopPropagation();

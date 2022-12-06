@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect,useState } from 'react'
 import { GlobalStoreContext } from '../store'
 import ListCard from './ListCard.js'
 import MUIDeleteModal from './MUIDeleteModal'
@@ -8,7 +8,10 @@ import AddIcon from '@mui/icons-material/Add';
 import Fab from '@mui/material/Fab'
 import List from '@mui/material/List';
 import Typography from '@mui/material/Typography'
-import { borderRadius, Box } from '@mui/system'
+import { borderBottom, borderRadius, Box } from '@mui/system'
+
+import TabScreen from "./TabScreen";
+
 /*
     This React component lists all the top5 lists in the UI.
     
@@ -39,6 +42,27 @@ const HomeScreen = () => {
             }
             </List>;
     }
+
+    // const TabStyle={
+    //     cursor: 'pointer',
+    //     opacity: '0.6',
+    //     background:'white',
+    //     border: 0,
+    //     outline: 0,
+    //     color: 'black'
+    // };
+
+    // const ActiveTabStyle={
+    //     cursor: 'pointer',
+    //     opacity: '0.6',
+    //     background:'white',
+    //     border: 0,
+    //     outline: 0,
+    //     color:'black',
+    //     borderBottom: "2px solid black",
+    //     opacity: 1
+    // }
+
     return (
         <div id="playlist-selector">
             
@@ -54,11 +78,10 @@ const HomeScreen = () => {
 
                 {/********* youtube API *********/}
                 <Box id="player-comment-box">
+                    <TabScreen id="tab-screen"></TabScreen>
                 </Box>
-
+ 
             </Box>
-
-
             <div id="list-selector-heading">
             <Fab 
                 color="primary" 

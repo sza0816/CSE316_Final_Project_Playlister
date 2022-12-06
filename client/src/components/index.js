@@ -14,6 +14,7 @@ import SplashScreen from './SplashScreen'
 import Statusbar from './Statusbar'
 import WorkspaceScreen from './WorkspaceScreen'
 import NavBar from './NavBar'
+import TabScreen from './TabScreen'
 
 //import MUIAccountErrorModal from './MUIAccountErrorModal'
 /*
@@ -38,5 +39,6 @@ export {
     Statusbar, 
     WorkspaceScreen,
     MUIAccountErrorModal,
-    NavBar
+    NavBar,
+    TabScreen
  }

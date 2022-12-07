@@ -1,7 +1,7 @@
 import React from 'react';
 import YouTube from 'react-youtube';
 import { GlobalStoreContext } from '../store';
-import { useContext, useState } from 'react';
+import { useContext,useRef,useState, useEffect } from 'react';
 import { Box } from '@mui/system';
 import { IconButton } from '@mui/material';
 import FastRewindIcon from '@mui/icons-material/FastRewind';
@@ -17,6 +17,9 @@ export default function YouTubePlayerExample() {
     // DEMONSTRATES HOW TO IMPLEMENT A PLAYLIST THAT MOVES
     // FROM ONE SONG TO THE NEXT
     const {store}=useContext(GlobalStoreContext);
+    const [isPlaying,setisPlaying]=useState(true);     // whether is playing 
+    const [player,setplayer]=useState(null);         //event.taget
+    const playerRef = useRef(null);
 
     // THIS HAS THE YOUTUBE IDS FOR THE SONGS IN OUR PLAYLIST
     let songIdArray=[];
@@ -29,8 +32,8 @@ export default function YouTubePlayerExample() {
         songIdArray.push(song);
     }
 
-    console.log("list now playing: " + list);
-    console.log("song Array now playing: " + songArray);
+    // console.log("list now playing: " + list);
+    // console.log("song Array now playing: " + songArray);
     let playlist=songIdArray;
 
     // THIS IS THE INDEX OF THE SONG CURRENTLY IN USE IN THE PLAYLIST
@@ -52,7 +55,6 @@ export default function YouTubePlayerExample() {
         let songId = playlist[currentSong];
         player.loadVideoById(songId);
         player.playVideo();
-        console.log("song now playing: "+ songId);
     }
 
     // THIS FUNCTION INCREMENTS THE PLAYLIST SONG TO THE NEXT ONE
@@ -65,6 +67,27 @@ export default function YouTubePlayerExample() {
         loadAndPlayCurrentSong(event.target);
         event.target.playVideo();
         // console.log(playlist.name,playlist[currentSong],currentSong+1,playlist[currentSong].title,playlist[currentSong].artist);
+        setplayer(event.target);
+    }
+
+    function PauseSong(event){
+        if(isPlaying){
+            playerRef.current.getInternalPlayer().pauseVideo();
+        }
+        else{
+            console.log("song already paused");
+        }
+        setisPlaying(!isPlaying);
+    }
+
+    function playSong(event){
+        if(!isPlaying){
+            playerRef.current.getInternalPlayer().playVideo();
+        }
+        else{
+            console.log("song already playing");
+        }
+        setisPlaying(!isPlaying);
     }
 
     // THIS IS OUR EVENT HANDLER FOR WHEN THE YOUTUBE PLAYER'S STATE
@@ -104,7 +127,8 @@ export default function YouTubePlayerExample() {
         onReady={onPlayerReady}
         onStateChange={onPlayerStateChange}
         songInfo={songArray[currentSong]}
-        songId={currentSong} />;
+        songId={currentSong}
+        ref={playerRef} />;
 
         <Box id="player-button-box">
             <Typography sx={{fontWeight:"bold", color:"black", fontSize: 20, textAlign:"center"}}>Now Playing</Typography>
@@ -116,8 +140,8 @@ export default function YouTubePlayerExample() {
             </Box>
             <Box id="player-buttons" style={{display:"flex", flexDirection:"row", alignSelf:"center", color:"black"}}>
               <IconButton style={{color:"black"}}><FastRewindIcon></FastRewindIcon></IconButton>
-              <IconButton style={{color:"black"}}><StopIcon></StopIcon></IconButton>
-              <IconButton style={{color:"black"}}><ArrowRightIcon></ArrowRightIcon></IconButton>
+              <IconButton style={{color:"black"}} onClick={PauseSong}><StopIcon></StopIcon></IconButton>
+              <IconButton style={{color:"black"}} onClick={playSong}><ArrowRightIcon></ArrowRightIcon></IconButton>
               <IconButton style={{color:"black"}}><FastForwardIcon></FastForwardIcon></IconButton>
             </Box>
         </Box>

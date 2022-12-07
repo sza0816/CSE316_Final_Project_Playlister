@@ -167,7 +167,11 @@ function ListCard(props) {
                             <IconButton onClick={handleToggleEdit} aria-label='edit'>
                                 <EditIcon style={{fontSize:'20pt'}} />
                             </IconButton>
-
+                            {/* delete button */}
+                            <IconButton onClick={(event) => {handleDeleteList(event, idNamePair._id)}} aria-label='delete'>
+                                <DeleteIcon style={{fontSize:'20pt'}} />
+                            </IconButton>
+                            
                             {/* display like and dislike buttons if published */}
                             <Stack direction="row" justifyContent="space-between" >
                             <IconButton onClick={addLike}>

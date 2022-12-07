@@ -8,7 +8,6 @@ import FastRewindIcon from '@mui/icons-material/FastRewind';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import FastForwardIcon from '@mui/icons-material/FastForward';
 import StopIcon from '@mui/icons-material/Stop';
-import { ContactSupportOutlined } from '@mui/icons-material';
 import Typography from '@mui/material/Typography';
 
 export default function YouTubePlayerExample() {
@@ -49,12 +48,18 @@ export default function YouTubePlayerExample() {
         },
     };
 
+    let songNumber, title,artist;
     // THIS FUNCTION LOADS THE CURRENT SONG INTO
     // THE PLAYER AND PLAYS IT
     function loadAndPlayCurrentSong(player) {
         let songId = playlist[currentSong];
         player.loadVideoById(songId);
         player.playVideo();
+        console.log("now playing: "+ currentSong);
+
+        songNumber=currentSong+1;
+        title=songArray[currentSong].title;
+        artist=songArray[currentSong].artist;
     }
 
     // THIS FUNCTION INCREMENTS THE PLAYLIST SONG TO THE NEXT ONE
@@ -63,11 +68,18 @@ export default function YouTubePlayerExample() {
         currentSong = currentSong % playlist.length;
     }
 
+    function decSong(){
+        currentSong--;
+        currentSong = currentSong % playlist.length;
+        console.log(currentSong);
+    }
+
     function onPlayerReady(event) {
         loadAndPlayCurrentSong(event.target);
         event.target.playVideo();
         // console.log(playlist.name,playlist[currentSong],currentSong+1,playlist[currentSong].title,playlist[currentSong].artist);
         setplayer(event.target);
+        // console.log(player);
     }
 
     function PauseSong(event){
@@ -90,6 +102,18 @@ export default function YouTubePlayerExample() {
         setisPlaying(!isPlaying);
     }
 
+    function skipBack(event){
+        console.log("entered skipback function");
+        decSong();
+        loadAndPlayCurrentSong(player);
+        console.log("playing prev song");
+    }
+
+    function skipNext(event){
+            incSong();
+            loadAndPlayCurrentSong(player);
+            console.log("playing next song");
+    }
     // THIS IS OUR EVENT HANDLER FOR WHEN THE YOUTUBE PLAYER'S STATE
     // CHANGES. NOTE THAT playerStatus WILL HAVE A DIFFERENT INTEGER
     // VALUE TO REPRESENT THE TYPE OF STATE CHANGE. A playerStatus
@@ -126,23 +150,23 @@ export default function YouTubePlayerExample() {
         opts={playerOptions}
         onReady={onPlayerReady}
         onStateChange={onPlayerStateChange}
-        songInfo={songArray[currentSong]}
-        songId={currentSong}
-        ref={playerRef} />;
+        // songInfo={songArray[currentSong]}
+        // songId={currentSong}
+        ref={playerRef} />
 
         <Box id="player-button-box">
             <Typography sx={{fontWeight:"bold", color:"black", fontSize: 20, textAlign:"center"}}>Now Playing</Typography>
             <Box component={'span'} style={{display:"flex",flexDirection:"column",paddingLeft:"20px"}}>
                 <Typography>Playlist:<span>&nbsp;</span>{list.name}</Typography>
-                <Typography>Song #:<span>&nbsp;</span> {currentSong+1}</Typography>
-                <Typography>Title:<span>&nbsp;</span> {songArray[currentSong].title}</Typography>
-                <Typography>Artist: <span>&nbsp;</span>{songArray[currentSong].artist}</Typography>
+                <Typography>Song #:<span>&nbsp;</span> {songNumber}</Typography>
+                <Typography>Title:<span>&nbsp;</span> {title}</Typography>
+                <Typography>Artist: <span>&nbsp;</span>{artist}</Typography>
             </Box>
             <Box id="player-buttons" style={{display:"flex", flexDirection:"row", alignSelf:"center", color:"black"}}>
-              <IconButton style={{color:"black"}}><FastRewindIcon></FastRewindIcon></IconButton>
+              <IconButton style={{color:"black"}} onclick={skipBack}><FastRewindIcon></FastRewindIcon></IconButton>
               <IconButton style={{color:"black"}} onClick={PauseSong}><StopIcon></StopIcon></IconButton>
               <IconButton style={{color:"black"}} onClick={playSong}><ArrowRightIcon></ArrowRightIcon></IconButton>
-              <IconButton style={{color:"black"}}><FastForwardIcon></FastForwardIcon></IconButton>
+              <IconButton style={{color:"black"}} onClick={skipNext}><FastForwardIcon></FastForwardIcon></IconButton>
             </Box>
         </Box>
     </div>

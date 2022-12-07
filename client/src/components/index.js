@@ -15,7 +15,7 @@ import Statusbar from './Statusbar'
 import WorkspaceScreen from './WorkspaceScreen'
 import NavBar from './NavBar'
 import TabScreen from './TabScreen'
-
+import YouTubePlayer from './YouTubePlayer'
 //import MUIAccountErrorModal from './MUIAccountErrorModal'
 /*
     This serves as a module so that we can import
@@ -40,5 +40,6 @@ export {
     WorkspaceScreen,
     MUIAccountErrorModal,
     NavBar,
-    TabScreen
+    TabScreen,
+    YouTubePlayer
  }

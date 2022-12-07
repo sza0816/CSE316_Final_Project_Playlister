@@ -34,11 +34,13 @@ function SongCard(props) {
         store.addMoveSongTransaction(sourceIndex, targetIndex);
     }
     function handleRemoveSong(event) {
+        event.preventDefault();
         store.showRemoveSongModal(index, song);
     }
     function handleClick(event) {
         // DOUBLE CLICK IS FOR SONG EDITING
         if (event.detail === 2) {
+            event.preventDefault();
             store.showEditSongModal(index, song);
         }
     }
@@ -58,12 +60,13 @@ function SongCard(props) {
             onClick={handleClick}
         >
             {index + 1}.
-            <a
+            <p  style={{display:"inline"}}
                 id={'song-' + index + '-link'}
                 className="song-link"
-                href={"https://www.youtube.com/watch?v=" + song.youTubeId}>
+                // href={"https://www.youtube.com/watch?v=" + song.youTubeId}
+                >
                 {song.title} by {song.artist}
-            </a>
+            </p>
             <input
                 type="button"
                 id={"remove-song-" + index}

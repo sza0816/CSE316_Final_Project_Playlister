@@ -2,6 +2,8 @@ import React, { useContext, useEffect,useState } from 'react'
 import { GlobalStoreContext } from '../store'
 import ListCard from './ListCard.js'
 import MUIDeleteModal from './MUIDeleteModal'
+import MUIEditSongModal from './MUIEditSongModal'
+import MUIRemoveSongModal from './MUIRemoveSongModal'
 import NavBar from './NavBar'
 
 import AddIcon from '@mui/icons-material/Add';
@@ -27,6 +29,13 @@ const HomeScreen = () => {
     function handleCreateNewList() {
         store.createNewList();
     }
+
+    let editSongModal,removeSongModal;
+    if (store.currentSong){
+        editSongModal=<MUIEditSongModal></MUIEditSongModal>;
+        // removeSongModal=<MUIRemoveSongModal></MUIRemoveSongModal>;
+    }
+
     let listCard = "";
     if (store) {
         listCard = 
@@ -38,8 +47,12 @@ const HomeScreen = () => {
                         idNamePair={pair}
                         selected={false}
                     />
+                    
                 ))
             }
+            
+            {editSongModal}
+            
             </List>;
     }
 
@@ -74,6 +87,7 @@ const HomeScreen = () => {
                         listCard
                     }
                     <MUIDeleteModal />
+                    {/* {removeSongModal} */}
                 </div>
 
                 {/********* youtube API *********/}

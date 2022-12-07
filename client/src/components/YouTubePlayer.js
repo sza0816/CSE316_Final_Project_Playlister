@@ -2,6 +2,14 @@ import React from 'react';
 import YouTube from 'react-youtube';
 import { GlobalStoreContext } from '../store';
 import { useContext, useState } from 'react';
+import { Box } from '@mui/system';
+import { IconButton } from '@mui/material';
+import FastRewindIcon from '@mui/icons-material/FastRewind';
+import ArrowRightIcon from '@mui/icons-material/ArrowRight';
+import FastForwardIcon from '@mui/icons-material/FastForward';
+import StopIcon from '@mui/icons-material/Stop';
+import { ContactSupportOutlined } from '@mui/icons-material';
+import Typography from '@mui/material/Typography';
 
 export default function YouTubePlayerExample() {
     // THIS EXAMPLE DEMONSTRATES HOW TO DYNAMICALLY MAKE A
@@ -11,14 +19,27 @@ export default function YouTubePlayerExample() {
     const {store}=useContext(GlobalStoreContext);
 
     // THIS HAS THE YOUTUBE IDS FOR THE SONGS IN OUR PLAYLIST
-    let playlist=store.currentList.songs;
+    let songIdArray=[];
+
+    let list=store.listToPlay;
+    let songArray=list.songs;       //define song array in order to show song info
+
+    for(let i=0;i<list.songs.length;i++){
+        let song=list.songs[i].youTubeId;
+        songIdArray.push(song);
+    }
+
+    console.log("list now playing: " + list);
+    console.log("song Array now playing: " + songArray);
+    let playlist=songIdArray;
 
     // THIS IS THE INDEX OF THE SONG CURRENTLY IN USE IN THE PLAYLIST
     let currentSong = 0;
 
     const playerOptions = {
-        height: '390',
-        width: '640',
+        position: "absolute",
+        height: '100%',
+        width: '100%',
         playerVars: {
             // https://developers.google.com/youtube/player_parameters
             autoplay: 0,
@@ -28,9 +49,10 @@ export default function YouTubePlayerExample() {
     // THIS FUNCTION LOADS THE CURRENT SONG INTO
     // THE PLAYER AND PLAYS IT
     function loadAndPlayCurrentSong(player) {
-        let song = playlist[currentSong];
-        player.loadVideoById(song);
+        let songId = playlist[currentSong];
+        player.loadVideoById(songId);
         player.playVideo();
+        console.log("song now playing: "+ songId);
     }
 
     // THIS FUNCTION INCREMENTS THE PLAYLIST SONG TO THE NEXT ONE
@@ -42,6 +64,7 @@ export default function YouTubePlayerExample() {
     function onPlayerReady(event) {
         loadAndPlayCurrentSong(event.target);
         event.target.playVideo();
+        // console.log(playlist.name,playlist[currentSong],currentSong+1,playlist[currentSong].title,playlist[currentSong].artist);
     }
 
     // THIS IS OUR EVENT HANDLER FOR WHEN THE YOUTUBE PLAYER'S STATE
@@ -72,11 +95,31 @@ export default function YouTubePlayerExample() {
             // THE VIDEO HAS BEEN CUED
             console.log("5 Video cued");
         }
-    }
+    }       
 
-    return <YouTube
+    return <div style={{padding:"0px"}}>
+        <YouTube
         videoId={playlist[currentSong]}
         opts={playerOptions}
         onReady={onPlayerReady}
-        onStateChange={onPlayerStateChange} />;
+        onStateChange={onPlayerStateChange}
+        songInfo={songArray[currentSong]}
+        songId={currentSong} />;
+
+        <Box id="player-button-box">
+            <Typography sx={{fontWeight:"bold", color:"black", fontSize: 20, textAlign:"center"}}>Now Playing</Typography>
+            <Box component={'span'} style={{display:"flex",flexDirection:"column",paddingLeft:"20px"}}>
+                <Typography>Playlist:<span>&nbsp;</span>{list.name}</Typography>
+                <Typography>Song #:<span>&nbsp;</span> {currentSong+1}</Typography>
+                <Typography>Title:<span>&nbsp;</span> {songArray[currentSong].title}</Typography>
+                <Typography>Artist: <span>&nbsp;</span>{songArray[currentSong].artist}</Typography>
+            </Box>
+            <Box id="player-buttons" style={{display:"flex", flexDirection:"row", alignSelf:"center", color:"black"}}>
+              <IconButton style={{color:"black"}}><FastRewindIcon></FastRewindIcon></IconButton>
+              <IconButton style={{color:"black"}}><StopIcon></StopIcon></IconButton>
+              <IconButton style={{color:"black"}}><ArrowRightIcon></ArrowRightIcon></IconButton>
+              <IconButton style={{color:"black"}}><FastForwardIcon></FastForwardIcon></IconButton>
+            </Box>
+        </Box>
+    </div>
 }

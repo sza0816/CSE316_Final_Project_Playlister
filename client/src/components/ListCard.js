@@ -100,7 +100,7 @@ function ListCard(props) {
     let createdAuthor="By: ";
     if(auth.getUsername()!=undefined)
         createdAuthor+=auth.getUsername();
-    console.log(createdAuthor);
+    // console.log(createdAuthor);
 
     function addLike(event){
         console.log("like added");
@@ -108,6 +108,14 @@ function ListCard(props) {
 
     function addDislike(event){
         console.log("Dislike added");
+    }
+
+    function handlePlaySongs(event){
+        if(event.detail===1 ){
+            event.stopPropagation()
+            store.findAndStoreListById(idNamePair._id);
+            console.log("handle play song in listcard"+ idNamePair._id);
+        }
     }
 
     let selectClass = "unselected-list-card";
@@ -142,7 +150,9 @@ function ListCard(props) {
             sx={{ borderRadius: 5,border:2, margin:"10px", marginRight: '20px', display: 'flex'}} 
             id={idNamePair._id}
             key={idNamePair._id}
-            style={{ width: '96%', borderRadius:"20px", padding: 0, background: "rgb(255,255,242)", display:"block"}}>
+            style={{ width: '96%', borderRadius:"20px", padding: 0, background: "rgb(255,255,242)", display:"block"}}
+            onClick={handlePlaySongs}
+            >
             <CardHeader
                 title={idNamePair.name}
                 subheader={createdAuthor}

@@ -8,9 +8,12 @@ import Box from '@mui/material/Box';
 import { GlobalStoreContext } from '../store';
 import { useContext, useState } from 'react';
 import YouTube from './YouTubePlayer'
-
-// import "../node_modules/video-react/dist/video-react.css";
-// import './App.css';
+import { IconButton } from '@mui/material';
+import FastRewindIcon from '@mui/icons-material/FastRewind';
+import ArrowRightIcon from '@mui/icons-material/ArrowRight';
+import FastForwardIcon from '@mui/icons-material/FastForward';
+import StopIcon from '@mui/icons-material/Stop';
+import { ContactSupportOutlined } from '@mui/icons-material';
 
 
 function TabPanel(props) {
@@ -25,7 +28,7 @@ function TabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box sx={{ p: 3 }}>
+        <Box>
           <Typography>{children}</Typography>
         </Box>
       )}
@@ -46,44 +49,23 @@ function a11yProps(index) {
   };
 }
 
-export default function TabScreen() {
+export default function TabScreen(props) {
   const [value, setValue] = React.useState(0);
   const { store } = useContext(GlobalStoreContext);
-
-  let songInfobox;
-  let YouTubePlayer;
-  if(store.currentList){
-
-    console.log(store.currentList.songs[0]);
-    songInfobox=
-        <ul component="span">
-            <li>
-                <Typography>Playlist: {store.currentList.name}</Typography>
-
-            </li>
-            <li>
-            <Typography>Song #:     current song number
-                {/* {store.currentList.songs[0]} */}
-            </Typography>
-            </li>
-            <li>
-            <Typography>Title:       current song title
-                {/* {store.currentList.songs[0].title} */}
-                </Typography>
-            </li>
-            <li>
-            <Typography>Artist:        current song artist
-                {/* {store.currentList.songs[0].artist} */}
-                </Typography>
-            </li>
-        </ul>
-    ;
-    YouTubePlayer=<YouTube></YouTube>
-  }
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+  let youtube;
+  if(store.listToPlay){
+    if(store.listToPlay.songs.length>0){
+      youtube=<YouTube style={{padding:"0px"}}></YouTube>
+      console.log(store.listToPlay.songs);
+    }
+  }
+
+ 
 
   return (
     <Box sx={{ width: '100%' }}>
@@ -93,13 +75,8 @@ export default function TabScreen() {
           <Tab label="Comments" {...a11yProps(1)} />
         </Tabs>
       </Box>
-      <TabPanel value={value} index={0}>
-        <Box id="youtube-player-box">{YouTubePlayer}</Box>
-        <Box id="player-button-box" component="span">
-            <Typography sx={{fontWeight:"bold", color:"black", fontSize: 20, textAlign:"center"}}>Now Playing</Typography>
-            {songInfobox}
-        </Box>
-        
+      <TabPanel value={value} index={0} component={"Box"} style={{Padding:"0px"}}>
+        {youtube}
       </TabPanel>
 
 
@@ -107,7 +84,7 @@ export default function TabScreen() {
 
 
 
-      <TabPanel value={value} index={1}>
+      <TabPanel value={value} index={1} component={"Box"}>
        comments area
       </TabPanel>
     </Box>

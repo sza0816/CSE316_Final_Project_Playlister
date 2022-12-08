@@ -33,17 +33,21 @@ export default function MUIEditSongModal() {
 
     function handleCancelEditSong() {
         store.hideModals();
+        console.log("edit song modal disappears");
     }
 
     function handleUpdateTitle(event) {
+        console.log("handleupdatetitle")
         setTitle(event.target.value);
     }
 
     function handleUpdateArtist(event) {
+        console.log("handleupdatarist")
         setArtist(event.target.value);
     }
 
     function handleUpdateYouTubeId(event) {
+        console.log("handleupdateyoutube")
         setYouTubeId(event.target.value);
     }
 

@@ -18,9 +18,11 @@ function WorkspaceScreen() {
     
     let modalJSX = "";
     if (store.isEditSongModalOpen()) {
+        console.log("edit song modal appears");
         modalJSX = <MUIEditSongModal />;
     }
     else if (store.isRemoveSongModalOpen()) {
+        console.log("remove song modal appears");
         modalJSX = <MUIRemoveSongModal />;
     }
     return (

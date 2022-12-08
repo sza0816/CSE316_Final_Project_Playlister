@@ -34,13 +34,15 @@ function SongCard(props) {
         store.addMoveSongTransaction(sourceIndex, targetIndex);
     }
     function handleRemoveSong(event) {
-        event.preventDefault();
+        // event.preventDefault();
+        console.log("call handle remove song")
         store.showRemoveSongModal(index, song);
     }
     function handleClick(event) {
         // DOUBLE CLICK IS FOR SONG EDITING
         if (event.detail === 2) {
-            event.preventDefault();
+            // event.preventDefault();
+            console.log("call handle click")
             store.showEditSongModal(index, song);
         }
     }

@@ -116,7 +116,8 @@ function ListCard(props) {
         if(event.detail===1 ){
             event.stopPropagation()
             store.findAndStoreListById(idNamePair._id);
-            console.log("handle play song in listcard"+ idNamePair._id);
+            // console.log("current song in store: "+store.currentList);
+            // console.log("handle play song in listcard"+ idNamePair._id);
         }
     }
 
@@ -148,13 +149,18 @@ function ListCard(props) {
     // if the current song is published 
         //set up like and dislike buttons
         //set up published and listens line
+    let backgroundcol = "rgb(255,255,242)";
+    if(store.listToPlay && idNamePair._id == store.listToPlay._id) {
+        console.log("color changed");
+        backgroundcol="rgb(226,197,209)";
+    }
 
     let cardElement =
         <Card
             sx={{ borderRadius: 5,border:2, margin:"10px", marginRight: '20px', display: 'flex'}} 
             id={idNamePair._id}
             key={idNamePair._id}
-            style={{ width: '96%', borderRadius:"20px", padding: 0, background: "rgb(255,255,242)", display:"block"}}
+            style={{ width: '96%', borderRadius:"20px", padding: 0, background:`${backgroundcol}`, display:"block"}}
             onClick={handlePlaySongs}
             >
             <CardHeader
@@ -195,7 +201,9 @@ function ListCard(props) {
 
             <Accordion style={{margin:0, minHeight:0}}>
                     <AccordionSummary
-                        expandIcon={<ExpandMoreIcon onClick={(event)=>{handleLoadList(event, idNamePair._id)}}/>}
+                        expandIcon={<ExpandMoreIcon
+                             onClick={(event)=>{handleLoadList(event, idNamePair._id)}}
+                             />}
                         aria-controls="panel1a-content"
                         id="panel1a-header"
                         style={{minHeight:0 }}

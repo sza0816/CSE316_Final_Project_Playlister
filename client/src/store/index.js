@@ -415,10 +415,13 @@ function GlobalStoreContextProvider(props) {
     // FUNCTIONS ARE setCurrentList, addMoveItemTransaction, addUpdateItemTransaction,
     // moveItem, updateItem, updateCurrentList, undo, and redo
     store.setCurrentList = function (id) {
+        console.log("call setcurrentlist!");
         async function asyncSetCurrentList(id) {
             let response = await api.getPlaylistById(id);
             if (response.data.success) {
                 let playlist = response.data.playlist;
+                console.log(playlist);
+                console.log("======" + playlist._id)
 
                 response = await api.updatePlaylistById(playlist._id, playlist);
                 if (response.data.success) {

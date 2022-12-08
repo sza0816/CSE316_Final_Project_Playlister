@@ -52,7 +52,7 @@ const HomeScreen = () => {
             }
             
             {editSongModal}
-            
+            {/* {removeSongModal} */}
             </List>;
     }
 
@@ -87,7 +87,6 @@ const HomeScreen = () => {
                         listCard
                     }
                     <MUIDeleteModal />
-                    {/* {removeSongModal} */}
                 </div>
 
                 {/********* youtube API *********/}

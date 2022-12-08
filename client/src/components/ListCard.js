@@ -22,6 +22,8 @@ import CardHeader from '@mui/material/CardHeader';
 import WorkspaceScreen from './WorkspaceScreen';
 import EditToolbar from './EditToolbar';
 
+import MUIRemoveSongModal from './MUIRemoveSongModal';
+
 /*
     This is a card in our list of top 5 lists. It lets select
     a list for editing and it has controls for changing its 
@@ -128,8 +130,10 @@ function ListCard(props) {
     }
 
     let workspace;
+    let removeSongModal;
     if (store.currentList){
         workspace=<WorkspaceScreen></WorkspaceScreen>
+        // removeSongModal=<MUIRemoveSongModal></MUIRemoveSongModal>
     }
 
     let editToolbar = "";
@@ -222,6 +226,7 @@ function ListCard(props) {
                     </AccordionDetails>
 
             </Accordion>
+                            {/* {removeSongModal} */}
         </Card>
 
     if (editActive) {

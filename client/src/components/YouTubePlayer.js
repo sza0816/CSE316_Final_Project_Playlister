@@ -163,7 +163,7 @@ export default function YouTubePlayerExample() {
                 <Typography>Artist: <span>&nbsp;</span>{artist}</Typography>
             </Box>
             <Box id="player-buttons" style={{display:"flex", flexDirection:"row", alignSelf:"center", color:"black"}}>
-              <IconButton style={{color:"black"}} onclick={skipBack}><FastRewindIcon></FastRewindIcon></IconButton>
+              <IconButton style={{color:"black"}} onClick={skipBack}><FastRewindIcon></FastRewindIcon></IconButton>
               <IconButton style={{color:"black"}} onClick={PauseSong}><StopIcon></StopIcon></IconButton>
               <IconButton style={{color:"black"}} onClick={playSong}><ArrowRightIcon></ArrowRightIcon></IconButton>
               <IconButton style={{color:"black"}} onClick={skipNext}><FastForwardIcon></FastForwardIcon></IconButton>

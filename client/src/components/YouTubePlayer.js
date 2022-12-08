@@ -158,9 +158,9 @@ export default function YouTubePlayerExample() {
             <Typography sx={{fontWeight:"bold", color:"black", fontSize: 20, textAlign:"center"}}>Now Playing</Typography>
             <Box component={'span'} style={{display:"flex",flexDirection:"column",paddingLeft:"20px"}}>
                 <Typography>Playlist:<span>&nbsp;</span>{list.name}</Typography>
-                <Typography>Song #:<span>&nbsp;</span> {songNumber}</Typography>
-                <Typography>Title:<span>&nbsp;</span> {title}</Typography>
-                <Typography>Artist: <span>&nbsp;</span>{artist}</Typography>
+                <Typography>Song #:<span>&nbsp;</span> {currentSong+1}</Typography>
+                <Typography>Title:<span>&nbsp;</span> {songArray[currentSong].title}</Typography>
+                <Typography>Artist: <span>&nbsp;</span>{songArray[currentSong].artist}</Typography>
             </Box>
             <Box id="player-buttons" style={{display:"flex", flexDirection:"row", alignSelf:"center", color:"black"}}>
               <IconButton style={{color:"black"}} onClick={skipBack}><FastRewindIcon></FastRewindIcon></IconButton>

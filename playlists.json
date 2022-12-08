@@ -1,0 +1,872 @@
+[{
+  "_id": {
+    "$oid": "634f47c24e70f422205d863f"
+  },
+  "name": "Space Rock",
+  "songs": [
+    {
+      "_id": {
+        "$oid": "634f47c24e70f422205d8640"
+      },
+      "title": "1",
+      "artist": "2",
+      "youTubeId": "90M60PzmxEE"
+    },
+    {
+      "_id": {
+        "$oid": "634f47c24e70f422205d8641"
+      },
+      "title": "Astronomy Domine",
+      "artist": "Pink Floyd",
+      "youTubeId": "8UbNbor3OqQ"
+    },
+    {
+      "_id": {
+        "$oid": "634f47c24e70f422205d8642"
+      },
+      "title": "Brain Damage/Eclipse",
+      "artist": "Pink Floyd",
+      "youTubeId": "g1OOQP1-wOE"
+    },
+    {
+      "_id": {
+        "$oid": "634f47c24e70f422205d8643"
+      },
+      "title": "In the Meantime",
+      "artist": "Spacehog",
+      "youTubeId": "PCsGRCf8T9Y"
+    },
+    {
+      "_id": {
+        "$oid": "634f47c24e70f422205d8644"
+      },
+      "title": "Rocket Man",
+      "artist": "Elton John",
+      "youTubeId": "DtVBCG6ThDk"
+    },
+    {
+      "_id": {
+        "$oid": "634f47c24e70f422205d8645"
+      },
+      "title": "Set the Controls for the Heart of the Sun",
+      "artist": "Pink Floyd",
+      "youTubeId": "8RbXIMZmVv8"
+    },
+    {
+      "_id": {
+        "$oid": "634f47c24e70f422205d8646"
+      },
+      "title": "Space Oddity",
+      "artist": "David Bowie",
+      "youTubeId": "iYYRH4apXDo"
+    },
+    {
+      "_id": {
+        "$oid": "634f47c24e70f422205d8647"
+      },
+      "title": "Starless",
+      "artist": "King Crimson",
+      "youTubeId": "OfR6_V91fG8"
+    },
+    {
+      "_id": {
+        "$oid": "634f47c24e70f422205d8648"
+      },
+      "title": "The Solar System Song",
+      "artist": "A.J. Jenkins",
+      "youTubeId": "BZ-qLUIj_A0"
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1666140098588"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1666637079959"
+    }
+  },
+  "__v": 39
+},{
+  "_id": {
+    "$oid": "634f47c24e70f422205d864a"
+  },
+  "name": "Proggy Pop",
+  "songs": [
+    {
+      "_id": {
+        "$oid": "634f47c24e70f422205d864b"
+      },
+      "title": "Have a Cigar",
+      "artist": "Pink Floyd",
+      "youTubeId": "tbdpv7G_PPg"
+    },
+    {
+      "_id": {
+        "$oid": "634f47c24e70f422205d864c"
+      },
+      "title": "1",
+      "artist": "2",
+      "youTubeId": "ukgraQ-xkp4"
+    },
+    {
+      "_id": {
+        "$oid": "634f47c24e70f422205d864d"
+      },
+      "title": "Roundabout",
+      "artist": "Yes",
+      "youTubeId": "QOrrNM4md8c"
+    },
+    {
+      "_id": {
+        "$oid": "634f47c24e70f422205d864e"
+      },
+      "title": "The End",
+      "artist": "The Doors",
+      "youTubeId": "ZeMlQEWEg2Q"
+    },
+    {
+      "_id": {
+        "$oid": "634f614d4e70f422205d8a23"
+      },
+      "title": "Untitled",
+      "artist": "Unknown",
+      "youTubeId": "dQw4w9WgXcQ"
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1666140098626"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1666637128683"
+    }
+  },
+  "__v": 15
+},{
+  "_id": {
+    "$oid": "634f63b14e70f422205d8ab1"
+  },
+  "name": "Untitled0",
+  "songs": [],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1666147249635"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1666147249635"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "634f63b64e70f422205d8ab9"
+  },
+  "name": "Untitled2",
+  "songs": [
+    {
+      "_id": {
+        "$oid": "634f66b14e70f422205d8b3e"
+      },
+      "title": "Untitled",
+      "artist": "Unknown",
+      "youTubeId": "dQw4w9WgXcQ"
+    },
+    {
+      "_id": {
+        "$oid": "634f66b14e70f422205d8b3f"
+      },
+      "title": "Untitled",
+      "artist": "Unknown",
+      "youTubeId": "dQw4w9WgXcQ"
+    },
+    {
+      "_id": {
+        "$oid": "634f66b14e70f422205d8b40"
+      },
+      "title": "Untitled",
+      "artist": "Unknown",
+      "youTubeId": "dQw4w9WgXcQ"
+    },
+    {
+      "_id": {
+        "$oid": "634f66b14e70f422205d8b41"
+      },
+      "title": "Untitled",
+      "artist": "Unknown",
+      "youTubeId": "dQw4w9WgXcQ"
+    },
+    {
+      "_id": {
+        "$oid": "634f66b14e70f422205d8b42"
+      },
+      "title": "Untitled",
+      "artist": "Unknown",
+      "youTubeId": "dQw4w9WgXcQ"
+    },
+    {
+      "_id": {
+        "$oid": "634f66b14e70f422205d8b43"
+      },
+      "title": "Untitled",
+      "artist": "Unknown",
+      "youTubeId": "dQw4w9WgXcQ"
+    },
+    {
+      "_id": {
+        "$oid": "634f66b14e70f422205d8b44"
+      },
+      "title": "Untitled",
+      "artist": "Unknown",
+      "youTubeId": "dQw4w9WgXcQ"
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1666147254411"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1666148616427"
+    }
+  },
+  "__v": 22
+},{
+  "_id": {
+    "$oid": "634f655f4e70f422205d8abf"
+  },
+  "name": "Untitled0",
+  "songs": [
+    {
+      "_id": {
+        "$oid": "634f6e674e70f422205d8dd3"
+      },
+      "title": "1",
+      "artist": "Unknown",
+      "youTubeId": "dQw4w9WgXcQ"
+    },
+    {
+      "_id": {
+        "$oid": "634f6d4e4e70f422205d8d18"
+      },
+      "title": "3",
+      "artist": "Unknown",
+      "youTubeId": "dQw4w9WgXcQ"
+    },
+    {
+      "_id": {
+        "$oid": "634f6e674e70f422205d8dd5"
+      },
+      "title": "Untitled",
+      "artist": "hi",
+      "youTubeId": "dQw4w9WgXcQ"
+    },
+    {
+      "_id": {
+        "$oid": "634f6d4e4e70f422205d8d18"
+      },
+      "title": "2",
+      "artist": "Unknown",
+      "youTubeId": "dQw4w9WgXcQ"
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1666147679855"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1666150515545"
+    }
+  },
+  "__v": 41
+},{
+  "_id": {
+    "$oid": "634f6ed94e70f422205d8df6"
+  },
+  "name": "Untitled",
+  "songs": [
+    {
+      "_id": {
+        "$oid": "634f6f024e70f422205d8e41"
+      },
+      "title": "1",
+      "artist": "Unknown",
+      "youTubeId": "dQw4w9WgXcQ"
+    },
+    {
+      "_id": {
+        "$oid": "634f6f024e70f422205d8e42"
+      },
+      "title": "2",
+      "artist": "Unknown",
+      "youTubeId": "dQw4w9WgXcQ"
+    },
+    {
+      "_id": {
+        "$oid": "634f6f024e70f422205d8e43"
+      },
+      "title": "3",
+      "artist": "Unknown",
+      "youTubeId": "dQw4w9WgXcQ"
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1666150105722"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1666150429661"
+    }
+  },
+  "__v": 17
+},{
+  "_id": {
+    "$oid": "6356d923528c87edc4790445"
+  },
+  "name": "Untitled",
+  "songs": [
+    {
+      "_id": {
+        "$oid": "6356d956528c87edc4790496"
+      },
+      "title": "1",
+      "artist": "Unknown",
+      "youTubeId": "dQw4w9WgXcQ"
+    },
+    {
+      "_id": {
+        "$oid": "6356d956528c87edc4790497"
+      },
+      "title": "2",
+      "artist": "Unknown",
+      "youTubeId": "dQw4w9WgXcQ"
+    },
+    {
+      "_id": {
+        "$oid": "6356d956528c87edc4790498"
+      },
+      "title": "3",
+      "artist": "Unknown",
+      "youTubeId": "dQw4w9WgXcQ"
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1666636068000"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1666636118786"
+    }
+  },
+  "__v": 16
+},{
+  "_id": {
+    "$oid": "6356d95f528c87edc479049c"
+  },
+  "name": "Untitled",
+  "songs": [],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1666636127731"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1666636130848"
+    }
+  },
+  "__v": 4
+},{
+  "_id": {
+    "$oid": "63693bf4e6ea79252a92e959"
+  },
+  "name": "I hacked your playlist",
+  "songs": [],
+  "ownerEmail": "Chrome",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1667841012404"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1667841012404"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63693c67e6ea79252a92e996"
+  },
+  "name": "Untitled0",
+  "songs": [],
+  "ownerEmail": "b@gmail.com",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1667841127078"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1667841127078"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63693c6ae6ea79252a92e99e"
+  },
+  "name": "Untitled1",
+  "songs": [],
+  "ownerEmail": "b@gmail.com",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1667841130273"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1667841130273"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63693c6ce6ea79252a92e9a6"
+  },
+  "name": "Untitled2",
+  "songs": [],
+  "ownerEmail": "b@gmail.com",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1667841132329"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1667841132329"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63693c70e6ea79252a92e9ae"
+  },
+  "name": "Untitled3",
+  "songs": [],
+  "ownerEmail": "b@gmail.com",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1667841136762"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1667841136762"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63693c81e6ea79252a92e9b6"
+  },
+  "name": "I hacked your playlist",
+  "songs": [],
+  "ownerEmail": "Chrome",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1667841153434"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1667841153434"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63693ce6e6ea79252a92ea07"
+  },
+  "name": "I hacked your playlist",
+  "songs": [],
+  "ownerEmail": "Chrome",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1667841254964"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1667841254964"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63693ed956611a25e24c4a15"
+  },
+  "name": "I hacked your playlist",
+  "songs": [],
+  "ownerEmail": "Chrome",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1667841753683"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1667841753683"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "638bdae8ce51dd10257056d0"
+  },
+  "name": "Untitled1",
+  "songs": [
+    {
+      "_id": {
+        "$oid": "638ce0b6ce51dd10257058f2"
+      },
+      "title": "Untitled",
+      "artist": "?",
+      "youTubeId": "dQw4w9WgXcQ"
+    }
+  ],
+  "ownerEmail": "345@gmail.com",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670109928203"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670176950924"
+    }
+  },
+  "__v": 7
+},{
+  "_id": {
+    "$oid": "638be046ce51dd102570579d"
+  },
+  "name": "Untitled0",
+  "songs": [
+    {
+      "_id": {
+        "$oid": "638be225ce51dd1025705836"
+      },
+      "title": "Untitled",
+      "artist": "?",
+      "youTubeId": "dQw4w9WgXcQ"
+    },
+    {
+      "_id": {
+        "$oid": "638be225ce51dd1025705837"
+      },
+      "title": "Untitled",
+      "artist": "?",
+      "youTubeId": "dQw4w9WgXcQ"
+    },
+    {
+      "_id": {
+        "$oid": "638be225ce51dd1025705838"
+      },
+      "title": "Untitled",
+      "artist": "?",
+      "youTubeId": "dQw4w9WgXcQ"
+    },
+    {
+      "_id": {
+        "$oid": "638be225ce51dd1025705839"
+      },
+      "title": "Untitled",
+      "artist": "?",
+      "youTubeId": "dQw4w9WgXcQ"
+    },
+    {
+      "_id": {
+        "$oid": "638be225ce51dd102570583a"
+      },
+      "title": "Untitled",
+      "artist": "?",
+      "youTubeId": "dQw4w9WgXcQ"
+    },
+    {
+      "_id": {
+        "$oid": "638be225ce51dd102570583b"
+      },
+      "title": "Untitled",
+      "artist": "?",
+      "youTubeId": "dQw4w9WgXcQ"
+    },
+    {
+      "_id": {
+        "$oid": "638be225ce51dd102570583c"
+      },
+      "title": "Untitled",
+      "artist": "?",
+      "youTubeId": "dQw4w9WgXcQ"
+    },
+    {
+      "_id": {
+        "$oid": "638be225ce51dd102570583d"
+      },
+      "title": "Untitled",
+      "artist": "?",
+      "youTubeId": "dQw4w9WgXcQ"
+    },
+    {
+      "_id": {
+        "$oid": "638be225ce51dd102570583e"
+      },
+      "title": "Untitled",
+      "artist": "?",
+      "youTubeId": "dQw4w9WgXcQ"
+    },
+    {
+      "_id": {
+        "$oid": "638be225ce51dd102570583f"
+      },
+      "title": "Untitled",
+      "artist": "?",
+      "youTubeId": "dQw4w9WgXcQ"
+    },
+    {
+      "_id": {
+        "$oid": "638be225ce51dd1025705840"
+      },
+      "title": "Untitled",
+      "artist": "?",
+      "youTubeId": "dQw4w9WgXcQ"
+    }
+  ],
+  "ownerEmail": "345@gmail.com",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670111302420"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670111900805"
+    }
+  },
+  "__v": 12
+},{
+  "_id": {
+    "$oid": "638be04bce51dd10257057a5"
+  },
+  "name": "Untitled1",
+  "songs": [],
+  "ownerEmail": "345@gmail.com",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670111307443"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670111307443"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "638be053ce51dd10257057ad"
+  },
+  "name": "Untitled2",
+  "songs": [],
+  "ownerEmail": "345@gmail.com",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670111315758"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670111315758"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "638be1aace51dd10257057bf"
+  },
+  "name": "Untitled0",
+  "songs": [],
+  "ownerEmail": "345@gmail.com",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670111658268"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670111658268"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "638d1af9bccb9e8baf056118"
+  },
+  "name": "new tester",
+  "songs": [
+    {
+      "_id": {
+        "$oid": "638ec05a48b0da14ebf042f3"
+      },
+      "title": "Untitled",
+      "artist": "?",
+      "youTubeId": "dQw4w9WgXcQ"
+    },
+    {
+      "_id": {
+        "$oid": "638ecfb248b0da14ebf0438d"
+      },
+      "title": "Untitled",
+      "artist": "?",
+      "youTubeId": "dQw4w9WgXcQ"
+    },
+    {
+      "_id": {
+        "$oid": "638ecfb248b0da14ebf0438e"
+      },
+      "title": "Untitled",
+      "artist": "?",
+      "youTubeId": "dQw4w9WgXcQ"
+    }
+  ],
+  "ownerEmail": "nok@gmail.com",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670191865206"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670435647599"
+    }
+  },
+  "__v": 11
+},{
+  "_id": {
+    "$oid": "638d1e36bccb9e8baf056153"
+  },
+  "name": "Untitled0",
+  "songs": [
+    {
+      "_id": {
+        "$oid": "638fbcf3bbe2ac56bfcb3f15"
+      },
+      "title": "Untitled",
+      "artist": "?",
+      "youTubeId": "dQw4w9WgXcQ"
+    }
+  ],
+  "ownerEmail": "nok@gmail.com",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670192694527"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670426314708"
+    }
+  },
+  "__v": 3
+},{
+  "_id": {
+    "$oid": "638d1e3abccb9e8baf05615b"
+  },
+  "name": "Untitled1",
+  "songs": [],
+  "ownerEmail": "nok@gmail.com",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670192698500"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670192698500"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "638fe4f1bbe2ac56bfcb42d8"
+  },
+  "name": "Untitled0",
+  "songs": [
+    {
+      "_id": {
+        "$oid": "638fe520bbe2ac56bfcb430a"
+      },
+      "title": "Untitled",
+      "artist": "?",
+      "youTubeId": "dQw4w9WgXcQ"
+    },
+    {
+      "_id": {
+        "$oid": "638fe520bbe2ac56bfcb430b"
+      },
+      "title": "Untitled",
+      "artist": "?",
+      "youTubeId": "dQw4w9WgXcQ"
+    },
+    {
+      "_id": {
+        "$oid": "638fe520bbe2ac56bfcb430c"
+      },
+      "title": "Untitled",
+      "artist": "?",
+      "youTubeId": "dQw4w9WgXcQ"
+    }
+  ],
+  "ownerEmail": "nok@gmail.com",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670374641427"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670374688966"
+    }
+  },
+  "__v": 3
+},{
+  "_id": {
+    "$oid": "63915675f7f93a1cfedbc875"
+  },
+  "name": "Untitled0",
+  "songs": [],
+  "ownerEmail": "bro@gmail.com",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1670469237292"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1670469237292"
+    }
+  },
+  "__v": 0
+}]
